@@ -1,0 +1,16 @@
+using System;
+
+namespace Shesta
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input the EGN: ");
+            string egn = Console.ReadLine();
+
+            Console.WriteLine("The birth date is: {0}{1}.{2}{3}.19{4}{5}", egn[4], egn[5], egn[2], egn[3], egn[0], egn[1]);
+            Console.ReadLine();
+        }
+    }
+}
