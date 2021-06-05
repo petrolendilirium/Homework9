@@ -1,0 +1,34 @@
+using System;
+
+namespace Purva
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input text: ");
+            string text = Console.ReadLine();
+            char nextChar = ' ';
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                char letter = text[i];
+                if (i != text.Length - 1)
+                {
+                    nextChar = text[i + 1];
+                }                    
+                
+                if (letter.Equals('!') || letter.Equals('.') || letter.Equals(',') || letter.Equals('?'))
+                {
+                    if (!nextChar.Equals(' '))
+                    {
+                        text = text.Insert(i + 1, " ");
+                    }
+                }
+            }
+
+            Console.WriteLine(text);
+            Console.ReadLine();
+        }
+    }
+}
