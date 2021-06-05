@@ -1,0 +1,39 @@
+using System;
+
+namespace Vtora
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input word: ");
+            string text = Console.ReadLine();
+            char letter;
+            char backwards;
+            bool palindrome = true;
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                letter = text[i];
+                backwards = text[text.Length - 1 - i];
+
+                if (!letter.Equals(backwards))
+                {
+                    palindrome = false;
+                    break;
+                }                
+            }
+
+            if (palindrome)
+            {
+                Console.WriteLine("The word is a palindrome");
+            }
+            else
+            {
+                Console.WriteLine("The word is not a palindrome");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
