@@ -1,0 +1,47 @@
+using System;
+
+namespace Peta
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input the lenght of the array: ");
+            int n = int.Parse(Console.ReadLine());
+            string[] words = new string[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Input the word: ");
+                words[i] = Console.ReadLine();
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                string wordI = words[i];
+                char firstI = wordI[0];
+                int cI = firstI;
+
+                for (int j = i + 1; j < n; j++)
+                {
+                    string wordJ = words[j];
+                    char firstJ = wordJ[0];
+                    int cJ = firstJ;
+                    if (cI > cJ)
+                    {
+                        string help = words[i];
+                        words[i] = words[j];
+                        words[j] = help;
+                    }
+                }
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("{0} ", words[i]);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}
