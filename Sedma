@@ -1,0 +1,16 @@
+using System;
+
+namespace Sedma
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Input text: ");
+            string s = Console.ReadLine();
+            string change = s.Replace("A*A", "scr(A)");
+
+            Console.WriteLine(change);
+        }
+    }
+}
